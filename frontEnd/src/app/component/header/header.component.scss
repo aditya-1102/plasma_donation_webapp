@@ -1,0 +1,30 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.bgimage{
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 0px;
+    height: 450px;
+    width: 1536px;
+}
+.banner{
+    height: 450px;
+    width: 1519px;
+}
+mat-toolbar{
+    position: fixed-top;
+}
+.above-navbar{
+    background-color:#e30713;
+    height: 25px!important;
+    font-size: 14px;
+    color: white;
+}
+a{
+    color: white!important;
+}
+.imp{
+    color: black!important;
+}

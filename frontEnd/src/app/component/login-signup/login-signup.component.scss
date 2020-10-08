@@ -1,0 +1,32 @@
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.centerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+mat-card{
+    width:auto;
+}
+mat-form-field{
+    width: 60%;
+}
+.top-input-margin{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 45px;
+}
+.radio-top-margin{
+    margin-top: 15px;
+}
+.color-btn{
+    background-color:#e30713;
+    color: white;
+}
