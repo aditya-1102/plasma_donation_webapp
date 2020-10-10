@@ -30,3 +30,11 @@ mat-form-field{
     background-color:#e30713;
     color: white;
 }
+// input:focus {
+//     border-color: white !important;
+//     box-shadow: red;
+//     color:red;
+// }
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+        color: #E30713;
+}

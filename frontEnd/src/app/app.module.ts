@@ -27,13 +27,15 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {MatMenuModule} from '@angular/material/menu';
+import { MainComponentComponent } from './component/main-component/main-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    MainComponentComponent
   ],
   imports: [
     BrowserModule,
