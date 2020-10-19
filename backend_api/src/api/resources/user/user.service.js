@@ -5,7 +5,7 @@ export default{
             firstName:Joi.string().required(),
             lastName:Joi.string().required(),
             Email:Joi.string().email().required(),
-            Password:Joi.string().required(),
+            Password:Joi.string().required().min(6),
             Gender:Joi.string().required(),
             Age:Joi.number().required(),
             Role:Joi.string().required(),

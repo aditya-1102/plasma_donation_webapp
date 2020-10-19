@@ -17,6 +17,7 @@ const userSchema=new Schema({
     },
     Password:{
         type:String,
+        minlength:6,
         required:true
     },
     bloodGroup:{

@@ -17,7 +17,6 @@ export default{
         .catch(err=>res.status(500).json(err))
     },
     async signup(req,res){
-        
         try{
             const {error,value}=userService.validationSchema(req.body);
             

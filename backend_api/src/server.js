@@ -8,7 +8,13 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 
 mongoose.Promise=global.Promise;
-mongoose.connect('mongodb://localhost/plasmadb');        //CONNECTING TO THE DATABASE
+mongoose.connect('mongodb://localhost/plasmadb',{ useNewUrlParser: true ,  useUnifiedTopology: true , 'useCreateIndex': true} , err =>{
+    if(err){
+        console.error('Error!' +err)
+    }else{
+        console.log('Sucessfully Connected to MongoDB database @plasmadb')
+    }
+});        //CONNECTING TO THE DATABASE
 
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({
