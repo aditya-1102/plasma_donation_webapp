@@ -29,6 +29,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {Ng2SearchPipeModule} from 'ng2-search-filter';
 import {MatMenuModule} from '@angular/material/menu';
 import { MainComponentComponent } from './component/main-component/main-component.component';
+import { CovidTrackerComponent } from './component/covid-tracker/covid-tracker.component';
+import { AboutUsComponent } from './component/about-us/about-us.component';
+import { DosDontsComponent } from './component/dos-donts/dos-donts.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { MainComponentComponent } from './component/main-component/main-componen
     HeaderComponent,
     FooterComponent,
     LoginSignupComponent,
-    MainComponentComponent
+    MainComponentComponent,
+    CovidTrackerComponent,
+    AboutUsComponent,
+    DosDontsComponent
   ],
   imports: [
     BrowserModule,

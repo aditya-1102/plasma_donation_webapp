@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { User } from './user';
 import {UserService} from './user.service';
 import {Router} from '@angular/router'
+import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-login-signup',
@@ -33,7 +34,18 @@ export class LoginSignupComponent implements OnInit {
     })
   }
   login(){
-    console.log(this.loginForm.value);
+    this.userService.loginUser(this.loginForm.value).subscribe(data=>{
+      if(data.Role==""){
+        alert("user not available!!!");
+      }else if(data.Role=="User" || data.Role=="Admin"){
+        alert("Login Successful!!");
+        this.router.navigate(['/main-component',data.firstName]);
+        console.log(this.logincheck.value)
+      }
+    },err=>{
+      alert("an error occured, login failed");
+      console.log(err);
+    })
   }
 
   createSignupForm(){       //SIGNUP FORM GROUP
