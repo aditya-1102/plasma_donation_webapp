@@ -1,0 +1,112 @@
+<br><br><br><br>
+<div style="text-align: center;">
+    <button mat-raised-button color="primary" routerLink="/main-component"><span class="material-icons">double_arrow</span>&nbsp;&nbsp;Skip this step</button>
+</div>
+<br>
+<div class="container" style="background-color:#e30713;color: white;text-align: center;text-transform: uppercase;font-family: ui-rounded;padding-top: 5px;padding-bottom: 5px;">
+<h1 class="welcome">Be a Donor</h1>
+</div>
+<mat-card class="container">
+    <br><br>
+   <div style="text-align: center;">
+    <form class="form-container" (ngSubmit)="update()"  [formGroup]="updateForm" novalidate>       <!--Donor Reg Form -->
+        <div class="top-input-margin">
+            <br><br>
+
+            <div class="parent">                                     <!--Blood group field -->
+                <mat-form-field class="width" appearance="outline">
+                    <mat-label>Blood Group</mat-label>
+                    <mat-select formControlName="bloodGroup">
+                      <mat-option value="A+">A+</mat-option>
+                      <mat-option value="B+">B+</mat-option>
+                      <mat-option value="O+">O+</mat-option>
+                      <mat-option value="AB+">AB+</mat-option>
+                      <mat-option value="A-">A-</mat-option>
+                      <mat-option value="B-">B-</mat-option>
+                      <mat-option value="O-">O-</mat-option>
+                      <mat-option value="AB-">AB-</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+
+            <div class="parent">                                     <!--corono type field -->
+                <mat-form-field class="width" appearance="outline">
+                    <mat-label>Covid Type</mat-label>
+                    <mat-select formControlName="coronaType">
+                      <mat-option value="Symptomatic">Symptomatic</mat-option>
+                      <mat-option value="Asymptomatic">Asymptomatic</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+
+            <div class="parent">                                     <!--covid test date field -->
+                <mat-form-field class="width" appearance="outline">
+                    <mat-label>Covid Test Date</mat-label>
+                    <input matInput type="date" formControlName="covidTestDate">
+                  </mat-form-field>
+            </div>
+
+            <div class="parent"><mat-form-field class="width" appearance="outline">      <!--doc name field -->
+                <input matInput placeholder="Doctor Name" type="text" formControlName="doctorName">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field></div>
+
+            <div class="parent"><mat-form-field class="width" appearance="outline">      <!--hsopital name field -->
+                <input matInput placeholder="Hospital Name*" type="text" formControlName="hospitalName">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field></div>
+
+            <div class="parent">                                     <!--covid cured date field -->
+                <mat-form-field class="width" appearance="outline">
+                    <mat-label>Covid Cured Date</mat-label>
+                    <input matInput type="date" formControlName="covidCuredDate">
+                  </mat-form-field>
+            </div>
+
+            <div class="parent"><mat-form-field class="width" appearance="outline">      <!--contact field -->
+                <input matInput placeholder="Contact" type="number" formControlName="Contact">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field></div>
+
+            <div class="parent"><mat-form-field class="width" appearance="outline">      <!--address field -->
+                <input matInput placeholder="Address" type="text" formControlName="Address">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field></div>
+
+            <div class="parent"><mat-form-field class="width" appearance="outline">      <!--city field -->
+                <input matInput placeholder="City" type="text" formControlName="City">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field></div>
+
+            <div class="parent"><mat-form-field class="width" appearance="outline">      <!--state field -->
+                <input matInput placeholder="State" type="text" formControlName="State">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field></div>
+
+            <div class="parent">                                     <!--willing field -->
+                <mat-form-field class="width" appearance="outline">
+                    <mat-label>Are You Willing to Donate ?</mat-label>
+                    <mat-select formControlName="Willing">
+                      <mat-option value="true">Yes</mat-option>
+                      <mat-option value="false">No</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+
+            <!-- <div class="parent radio-top-margin"><mat-radio-group aria-label="Select an usertype">      Role field
+                <mat-radio-button color="primary" value="Vendor" name="Role">Male</mat-radio-button>
+                <mat-radio-button color="primary" value="Customer" name="Role">Customer</mat-radio-button>
+            </mat-radio-group></div> -->
+            
+            <br>
+            <div class="centerr">
+                <button mat-raised-button type="submit" style="background-color: #e30713;color: white;text-transform: uppercase;">Register</button>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <button mat-raised-button type="reset" color="default" style="text-transform: uppercase;" routerLink="/main-component">Cancel</button>
+            
+            </div>
+        </div>
+    </form>
+   </div>
+</mat-card>
+<br><br>

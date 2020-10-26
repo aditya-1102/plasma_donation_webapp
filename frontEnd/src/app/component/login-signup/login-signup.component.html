@@ -1,109 +1,126 @@
-<br><br>
-<div class="container">
-    <mat-card class="bg-light">
-    <div class="col-md-8 offset-md-2">
-        <mat-tab-group mat-align-tabs="center">
-            <mat-tab label="Login">
-                 <form class="form-container" (ngSubmit)="login()" [formGroup]="loginForm">      <!--LOGIN FORM -->
-                    <div class="top-input-margin">
-                        <div class="parent"><mat-form-field appearance="outline">
-                            <!-- <span><h6 *ngIf="logincheck" style="color: red;">*Invalid Email/Password</h6></span> -->
-                            <input matInput placeholder="Email" type="email" formControlName="Email">
-                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                            <!-- <mat-error *ngIf="loginForm.controls.Email.invalid && loginForm.controls.Email.touched">
-                                invalid*
-                            </mat-error> -->
-                        </mat-form-field></div>
-                        <div class="parent"><mat-form-field appearance="outline">
-                            <!-- <span><h6 *ngIf="logincheck" style="color: red;">*Invalid Email/Password</h6></span> -->
-                            <input matInput placeholder="Password" type="password" formControlName="Password">
-                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                            <!-- <mat-error *ngIf="loginForm.controls.Password.invalid && loginForm.controls.Password.touched">
-                                invalid*
-                            </mat-error> -->
-                        </mat-form-field></div>
-                        <br>
-                        <div class="centerr">
-                            <button mat-raised-button type="submit" class="color-btn">Login</button>
-                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <button mat-raised-button type="reset" color="default">Cancel</button>
-                        </div>
-                    </div>
-                </form>
-            </mat-tab>
-            <mat-tab label="Sign-Up">
-                <form class="form-container" (ngSubmit)="signup()" novalidate [formGroup]="signupForm">       <!--SIGNUP FORM -->
-                    <div class="top-input-margin">
-
-                         <div class="parent"><mat-form-field appearance="outline">      <!--FName field -->
-                            <input matInput placeholder="First Name *" type="text" formControlName="firstName">
-                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                            <!-- <mat-error *ngIf="signupForm.controls.Name.invalid && signupForm.controls.Name.touched">
-                                Required*
-                            </mat-error> -->
-                        </mat-form-field></div>
-
-                        <div class="parent"><mat-form-field appearance="outline">      <!--LName field -->
-                            <input matInput placeholder="Last Name *" type="text" formControlName="lastName">
-                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                            <!-- <mat-error *ngIf="signupForm.controls.Name.invalid && signupForm.controls.Name.touched">
-                                Required*
-                            </mat-error> -->
-                        </mat-form-field></div>
-                        
-                        <div class="parent"><mat-form-field appearance="outline">      <!--Email field -->
-                            <input matInput placeholder="Email *" type="email" formControlName="Email">
-                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                            <!-- <mat-error *ngIf="signupForm.controls.Email.invalid && signupForm.controls.Email.touched">
-                                Required*
-                            </mat-error> -->
-                        </mat-form-field></div>
-
-                        
-                        <div class="parent"> <mat-form-field appearance="outline">     <!--Password field -->
-                            <input matInput placeholder="Password *" type="password" formControlName="Password">
-                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                            <!-- <mat-error *ngIf="signupForm.controls.Password.invalid && signupForm.controls.Password.touched">
-                                Required*
-                            </mat-error> -->
-                        </mat-form-field></div>
-
-                        <div class="parent">                                     <!--Age field -->
-                            <mat-form-field appearance="outline">
-                                <mat-label>Age</mat-label>
-                                <input matInput type="number" formControlName="Age" >
+<div style="background-image: url(../../../assets/blood.png);background-repeat: no-repeat;background-size: cover;">
+<br><br><br><br><br><br>
+    <div class="container">
+        <mat-card class="bg-light">
+        <div class="col-md-8 offset-md-2">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab label="Login">
+                     <form class="form-container" (ngSubmit)="login()" [formGroup]="loginForm">      <!--LOGIN FORM -->
+                        <div class="top-input-margin">
+                            <br>
+                            <div class="parent"><mat-form-field appearance="outline">
+                                <!-- <span><h6 *ngIf="logincheck" style="color: red;">*Invalid Email/Password</h6></span> -->
+                                <mat-label>Email</mat-label>
+                                <input matInput placeholder="Email" type="email" formControlName="Email">
                                 <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-                              </mat-form-field>
+                                <mat-error *ngIf="loginForm.controls.Email.invalid && loginForm.controls.Email.touched">
+                                    invalid*
+                                </mat-error>
+                            </mat-form-field></div>
+                            <br>
+                            <div class="parent"><mat-form-field appearance="outline">
+                                <!-- <span><h6 *ngIf="logincheck" style="color: red;">*Invalid Email/Password</h6></span> -->
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="Password" type="password" formControlName="Password">
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                <mat-error *ngIf="loginForm.controls.Password.invalid && loginForm.controls.Password.touched">
+                                    invalid*
+                                </mat-error>
+                            </mat-form-field></div>
+                            <br><br>
+                            <div class="centerr">
+                                <button mat-raised-button type="submit" class="color-btn">Login</button>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <button mat-raised-button type="reset" color="default">Cancel</button>
+                            </div>
                         </div>
-
-                        <div class="parent">                                     <!--Gender field -->
-                            <mat-form-field appearance="outline">
-                                <mat-label>Gender</mat-label>
-                                <mat-select formControlName="Gender">
-                                  <mat-option value="Male">Male</mat-option>
-                                  <mat-option value="Female">Female</mat-option>
-                                  <mat-option value="Others">Others</mat-option>
-                                </mat-select>
-                              </mat-form-field>
+                    </form>
+                </mat-tab>
+                <mat-tab label="Sign-Up">
+                    <form class="form-container" (ngSubmit)="signup()" novalidate [formGroup]="signupForm">       <!--SIGNUP FORM -->
+                        <div class="top-input-margin">
+    
+                             <div class="parent"><mat-form-field appearance="outline">      <!--FName field -->
+                                <mat-label>First Name</mat-label>
+                                <input matInput placeholder="First Name *" type="text" formControlName="firstName">
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                <mat-error *ngIf="signupForm.controls.firstName.invalid && signupForm.controls.firstName.touched">
+                                    Required*
+                                </mat-error>
+                            </mat-form-field></div>
+    <br>
+                            <div class="parent"><mat-form-field appearance="outline">      <!--LName field -->
+                                <mat-label>Last Name</mat-label>
+                                <input matInput placeholder="Last Name *" type="text" formControlName="lastName">
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                <mat-error *ngIf="signupForm.controls.lastName.invalid && signupForm.controls.lastName.touched">
+                                    Required*
+                                </mat-error>
+                            </mat-form-field></div>
+    <br>                        
+                            <div class="parent"><mat-form-field appearance="outline">      <!--Email field -->
+                                <mat-label>Email</mat-label>
+                                <input matInput placeholder="Email *" type="email" formControlName="Email">
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                <mat-error *ngIf="signupForm.controls.Email.invalid && signupForm.controls.Email.touched">
+                                    Required*
+                                </mat-error>
+                            </mat-form-field></div>
+    <br>
+                            
+                            <div class="parent"> <mat-form-field appearance="outline">     <!--Password field -->
+                                <mat-label>Password</mat-label>
+                                <input matInput placeholder="Password *" type="password" formControlName="Password">
+                                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                <mat-error *ngIf="signupForm.controls.Password.invalid && signupForm.controls.Password.touched">
+                                    Required*<br>
+                                    Must be alphanumberic and greater than 6 characters*
+                                </mat-error>
+                            </mat-form-field></div>
+    <br>
+                            <div class="parent">                                     <!--Age field -->
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Age</mat-label>
+                                    <input matInput type="number" formControlName="Age" >
+                                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                                    <mat-error *ngIf="signupForm.controls.Age.invalid && signupForm.controls.Age.touched">
+                                        Required*
+                                    </mat-error>
+                                  </mat-form-field>
+                            </div>
+    <br>
+                            <div class="parent">                                     <!--Gender field -->
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Gender</mat-label>
+                                    <mat-select formControlName="Gender">
+                                      <mat-option value="Male">Male</mat-option>
+                                      <mat-option value="Female">Female</mat-option>
+                                      <mat-option value="Others">Others</mat-option>
+                                    </mat-select>
+                                    <mat-error *ngIf="signupForm.controls.Gender.invalid && signupForm.controls.Gender.touched">
+                                        Required*
+                                    </mat-error>
+                                  </mat-form-field>
+                            </div>
+    <br>                        
+                            <!-- <div class="parent radio-top-margin"><mat-radio-group aria-label="Select an usertype">      Role field
+                                <mat-radio-button color="primary" value="Vendor" name="Role">Male</mat-radio-button>
+                                <mat-radio-button color="primary" value="Customer" name="Role">Customer</mat-radio-button>
+                            </mat-radio-group></div> -->
+                            
+                            <br>
+                            <div class="centerr">
+                                <button mat-raised-button type="submit" class="color-btn">Signup</button>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                <button mat-raised-button type="reset" color="default">Cancel</button>
+                            
+                            </div>
                         </div>
-                        
-                        <!-- <div class="parent radio-top-margin"><mat-radio-group aria-label="Select an usertype">      Role field
-                            <mat-radio-button color="primary" value="Vendor" name="Role">Male</mat-radio-button>
-                            <mat-radio-button color="primary" value="Customer" name="Role">Customer</mat-radio-button>
-                        </mat-radio-group></div> -->
-                        
-                        <br>
-                        <div class="centerr">
-                            <button mat-raised-button type="submit" class="color-btn">Signup</button>
-                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <button mat-raised-button type="reset" color="default">Cancel</button>
-                        
-                        </div>
-                    </div>
-                </form>
-            </mat-tab>
-          </mat-tab-group>
+                    </form>
+                </mat-tab>
+              </mat-tab-group>
+        </div>
+    </mat-card>
     </div>
-</mat-card>
+<br><br><br><br><br><br>
 </div>
-<br><br>

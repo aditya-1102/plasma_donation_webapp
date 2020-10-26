@@ -1,0 +1,26 @@
+<br><br><br>
+<div class="container" style="text-align: center;text-transform: uppercase;background-color: #e30713;">
+    <h1 class="welcome">DONOR'S LIST</h1>
+</div>
+<div class="container-fluid">
+    <mat-card>
+      <div class="row">     <!--ROW 1-->
+
+        <div class="col-md-3 col-sm-6 mx-auto my-4" *ngFor="let donor of donorsList">
+                <mat-card class="example-card">
+                    <mat-card-header>   
+                      <mat-card-title style="text-transform: uppercase!important;padding-left: 15px!important;text-decoration: underline;">{{donor.firstName}}&nbsp;{{donor.lastName}}</mat-card-title>
+                    </mat-card-header>
+                    <hr style="border-top: 1px solid black;">
+                    <mat-card-content style="text-align: left">
+                        <b>BLOOD GROUP </b>: {{donor.bloodGroup}}<br>
+                        <b>CONTACT</b>: {{donor.Contact}}<br>
+                        {{donor.City}},&nbsp;{{donor.State}}
+                    </mat-card-content>
+                </mat-card>
+        </div>
+        
+      </div>
+    </mat-card>
+  </div>
+  <br><br>

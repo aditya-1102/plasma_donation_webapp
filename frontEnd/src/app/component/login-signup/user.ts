@@ -1,25 +1,25 @@
 export class User{
-    _id:String;
-    firstName:String;
-    lastName:String;
-    Email:String;
-    Password:String;
-    bloodGroup:String;
-    covidTestDate:Date;
+    _id:String; 
+    firstName:String;//
+    lastName:String;//
+    Email:String;//
+    Password:String;//
+    bloodGroup:String;//
+    covidTestDate:Date;//
     Report:String;
-    coronaType:String;
-    doctorName:String;
-    hospitalName:String;
-    covidCuredDate:Date
-    Gender:String;
-    Age:Number;
-    Contact:Number;
-    Address:String;
+    coronaType:String;//
+    doctorName:String;//
+    hospitalName:String;//
+    covidCuredDate:Date//
+    Gender:String;//
+    Age:Number;//
+    Contact:Number;//
+    Address:String;//
     idProof:String;
-    Willing:Boolean;
-    createdDate:Date;
-    isActive:Boolean;
-    Role:String;
-    City:String;
-    State:String;
+    Willing:Boolean;//
+    createdDate:Date;//
+    isActive:Boolean;//
+    Role:String;//
+    City:String;//
+    State:String;//
 }

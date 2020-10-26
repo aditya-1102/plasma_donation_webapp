@@ -1,27 +1,38 @@
 <mat-toolbar class="above-navbar">
     <span style="margin-left: auto;"></span>
-    <span class="material-icons">email</span>&nbsp;&nbsp;&nbsp;
+    <span class="material-icons" style="color: #e30713;">email</span>&nbsp;
     <a href="#">Contact Us : +91 83190-35482</a>
     <span class="example-spacer"></span>
-    <a routerLink="/login">Login
-    &nbsp;|&nbsp;
-    Signup</a>
+    <span *ngIf="isHidden" class="material-icons" style="color: #e30713;">login</span>&nbsp;
+    <a *ngIf="isHidden" routerLink="/login">Login&nbsp;|&nbsp;Signup</a>
+    <span *ngIf="!isHidden" class="material-icons" style="color: #e30713;">login</span>&nbsp;
+    <a *ngIf="!isHidden" (click)="navigateToLogin()">Logout</a>
     <span style="margin-right: auto;"></span>
 </mat-toolbar>
-<mat-toolbar>
+<!-- <mat-toolbar>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon routerLink="/main-component">home</mat-icon>
     </button>
     <span style="text-transform: uppercase;font-family: inherit;">Plasma Donation</span>
     <span class="example-spacer"></span>
-    <button mat-stroked-button style="color: red;text-transform: uppercase;font-family: inherit;">Register as Donor</button>
-    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>people</mat-icon>
+    <span></span>
+    <button mat-stroked-button style="color: red;text-transform: uppercase;" routerLink="/donor-reg">Register as Donor !</button>&nbsp;
+    <button mat-stroked-button style="color: red;text-transform: uppercase;">My Profile</button>
+</mat-toolbar> -->
+
+  <nav style="padding-top: 25px!important;padding-bottom: 15px!important;" class="navbar nav navbar-expand-lg bg-light main-nav">
+    <!-- <mat-icon routerLink="/main-component">home</mat-icon>&nbsp;&nbsp; -->
+    <a href="#" class="navbar-brand" style="text-transform: uppercase;text-align: left;"><span style="color: #e30713;font-size: 50px;font-family: 'Material Icons';">AAS</span><span style="color: black;font-size: 18px;text-decoration: overline;"> Step Towards Hope</span></a>
+    <button style="background-color: #e30713;color: white!important;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01,navbarColor02" aria-controls="navbarColor01,navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="material-icons">reorder</span>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>favorite</mat-icon>
-    </button> -->
-  </mat-toolbar>
-  <!-- <div class=" container bgimage">
-      <img class="banner" src="../../../assets/1.jpg" alt="plasma_banner">
-  </div> -->
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" routerLink="/main-component">Home&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+        <li class="nav-item"><a class="nav-link" (click)="navigateToDonorReg()">Become a Donor !&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/covid-stats">COVID-19 Stats&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/donors-list">Donors&nbsp;&nbsp;&nbsp;&nbsp;|</a></li>
+        <li class="nav-item"><a *ngIf="!isHidden" class="nav-link" style="text-transform: uppercase;">Hello {{currentUserName}} !</a></li>
+      </ul>
+    </div>
+  </nav>

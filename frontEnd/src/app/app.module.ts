@@ -32,6 +32,9 @@ import { MainComponentComponent } from './component/main-component/main-componen
 import { CovidTrackerComponent } from './component/covid-tracker/covid-tracker.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { DosDontsComponent } from './component/dos-donts/dos-donts.component';
+import { DonorRegComponent } from './component/donor-reg/donor-reg.component';
+import { SharedserviceService } from './component/sharedservice.service';
+import { DonorsListComponent } from './component/donors-list/donors-list.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { DosDontsComponent } from './component/dos-donts/dos-donts.component';
     MainComponentComponent,
     CovidTrackerComponent,
     AboutUsComponent,
-    DosDontsComponent
+    DosDontsComponent,
+    DonorRegComponent,
+    DonorsListComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +75,7 @@ import { DosDontsComponent } from './component/dos-donts/dos-donts.component';
     MatExpansionModule,
     Ng2SearchPipeModule
   ],
-  providers: [],
+  providers: [SharedserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

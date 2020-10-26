@@ -19,4 +19,8 @@ export class UserService {
   loginUser(model):Observable<User>{           //Login User
     return this.http.post<User>('http://localhost:3000/api/user/login',model);
   }
+  updateUser(model):Observable<User>{
+    return this.http.put<User>('http://localhost:3000/api/user/'+model._id,model);
+  }
+  
 }

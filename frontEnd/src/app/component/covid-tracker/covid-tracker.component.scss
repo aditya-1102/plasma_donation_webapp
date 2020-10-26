@@ -2,3 +2,16 @@
     color: white;
     font-family: ui-rounded;
 }
+.search{
+    width: 300px;
+}
+.check{
+    overflow-y: scroll;
+
+}
+.check::-webkit-scrollbar{
+    display: none;
+}
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #E30713;
+}

@@ -17,14 +17,30 @@ mat-toolbar{
     position: fixed-top;
 }
 .above-navbar{
-    background-color:#e30713;
-    height: 25px!important;
+    background-color:black;
     font-size: 14px;
     color: white;
+    height: auto;
 }
 a{
     color: white!important;
 }
 .imp{
     color: black!important;
+}
+.nav-link{
+    color: black!important;
+    font-size: 16px;
+}
+.nav-link:hover{
+    color:#e30713!important;
+    border-bottom: 1px solid black;
+}
+.nav-link:active{
+    color:#e30713!important;
+    border-bottom: 1px solid #e30713;
+}
+.nav-link:focus{
+    color:#e30713!important;
+    border-bottom: 1px solid #e30713;
 }

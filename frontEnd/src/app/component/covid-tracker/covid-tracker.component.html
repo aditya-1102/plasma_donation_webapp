@@ -1,13 +1,40 @@
-<div class="container" style="text-align: center;text-transform: uppercase;background-color: #e30713;">
+<br><br><br><br>
+<div class="container" style="text-align: center;text-transform: uppercase;background-color: #e30713;padding-top: 5px;padding-bottom: 5px;">
     <h1 class="welcome">Covid-19 Timeline</h1>
-  </div>
-  <div class="container-fluid">
-    <mat-card><p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, molestias? Voluptatibus, officia fugiat eaque magni impedit consequatur maxime magnam quasi repellendus, dolorem recusandae sed distinctio autem quam saepe? Odio, placeat.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea esse sit accusantium quos. Omnis ad quas nobis quis. Atque, assumenda labore eaque dicta eveniet voluptas itaque eum excepturi eligendi! Autem.
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam, explicabo odio! Beatae quae vitae a doloremque pariatur. Accusantium velit expedita, officiis nostrum iure eum itaque est veniam rerum qui labore.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum commodi mollitia architecto modi numquam excepturi id repellendus dolor quasi odit inventore labore doloremque voluptatibus quam, beatae omnis quo voluptate eligendi.
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur nihil fugiat delectus, quis consequuntur maxime odio expedita quibusdam explicabo provident aut distinctio aperiam ullam magni, voluptatum asperiores a corporis nisi?
-    </p></mat-card>
+</div>
+<br>
+<div style="text-align: center;">
+  <mat-form-field class="search" style="text-align: center;" appearance="outline">
+    <input matInput [(ngModel)]="search" placeholder="FIND YOUR COUNTRY" type="text">
+</mat-form-field>
+</div>
+<div class="container">
+    <mat-card style="background-color:lightgray">
+      <table class="table table-striped table-light table-responsive mat-elevation-z8 table-hover check" style="height: 1000px;">
+        <caption>Country Wise Covid-19 Stats</caption>
+        <thead class="thead-dark">
+          <th>DATE</th>
+          <th>COUNTRY</th>
+          <th>NEW CONFIRMED</th>
+          <th>TOTAL CONFIRMED</th>
+          <th>NEW DEATHS</th>
+          <th>TOTAL DEATHS</th>
+          <th>NEW RECOVERED</th>
+          <th>TOTAL RECOVERED</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let arr of countryreports | filter:search">
+            <td>{{arr.Date | date}}</td>
+            <td>{{arr.Country}}</td>
+            <td>{{arr.NewConfirmed}}</td>
+            <td>{{arr.TotalConfirmed}}</td>
+            <td>{{arr.NewDeaths}}</td>
+            <td>{{arr.TotalDeaths}}</td>
+            <td>{{arr.NewRecovered}}</td>
+            <td>{{arr.TotalRecovered}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card>
   </div>
   <br><br>
